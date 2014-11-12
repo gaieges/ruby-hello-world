@@ -21,6 +21,7 @@ configure do
 end
 
 get '/' do
+<<<<<<< HEAD
   File.read('main.html')
 end
 
@@ -58,4 +59,12 @@ delete '/keys/:id' do
   else
     "Key not found"
   end
+=======
+  "f u World!\n"+
+# ENV values are generated during template processing
+# and then passed to the container when openshift launches it.
+  "User is #{ENV['ADMIN_USERNAME']}\n"+
+  "Password is #{ENV['ADMIN_PASSWORD']}\n"+
+  "DB password is #{ENV['DB_PASSWORD']}\n"
+>>>>>>> origin/patch-1
 end
